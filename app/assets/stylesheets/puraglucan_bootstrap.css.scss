@@ -1,0 +1,180 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic);
+
+/* basic HTML5 and jQuery by http://freehtml5templates.com 
+   Custom Sytling and enhanced jQuery UI by Jayson Perry for Tenth Muse Creative http://tenthmusdcreative.com
+
+puraGlucan official Colors ----
+
+	puraGlucan Blue (tint=100%)         rgba(41, 91, 166, 1) #295ba6
+  puraGlucan Orange (tint=100%)       rgba(223, 145, 48, 1) #df9130
+  puraGlucan Maroon (tint=100%)       rgba(135, 13, 13,1) #870d0d
+  puraGlucan Grey (tint=100%)         rgba(, , , 1) #
+  puraGlucan Light Blue (tint=100%)   rgba(241, 246, 252, 1) #f1f6fc
+ */
+
+// Entreuse Application Custom Styling based on Bootstrap-sass
+//
+
+// Custom SASS CSS
+// Custom Site SASS Variables
+
+$blue-logo-color: rgba( 41, 91, 166, 1 ); 
+$orange-logo-color: rgba(223, 145, 48, 1);
+$maroon-logo-color: rgba( 135, 13, 13,1 );
+$light-blue-logo-color: rgba( 241, 246, 252, 1 );
+$light-blue-background-color: rgba(241, 246, 252, 1);// #F1F6FC
+$grey-forty-percent: rgba( 102, 102, 102, 1 ); // #666666
+$grey-sixty-percent: rgba( 102, 102, 102, 1 ); // #666666
+$white: rgba( 255, 255, 255, 1 ); // #ffffff
+$shadow-hard: 1px 1px 0 $grey-forty-percent;
+$shadow-soft: 2px 2px 2px $grey-forty-percent;
+
+$shadow-hard: 1px 1px 0 $grey-forty-percent;
+$shadow-soft: 2px 2px 2px $grey-forty-percent;
+
+$text-light-logo-blue: rgba( 213, 221, 230, 1 ); // #d5dde6
+
+$border-thick-line: 3px solid;
+$border-thin-line: 1px solid;
+
+$golden-ratio-long: 62.8%;
+$golden-ratio-short: 38.2%;
+
+$padding-none: 0px;
+$padding-sm: 8px;
+$padding-md: 16px;
+$padding-lg: 32px;
+
+$margin-none: 0px;
+$margin-sm: 8px;
+$margin-md: 16px;
+$margin-lg: 32px;
+
+
+// Mixins
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}  // .box { @include border-radius(10px); }
+
+// Scaffolding
+
+$body-bg: $light-blue-background-color;
+
+// Typography
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 14px;
+
+// Navbar
+$navbar-default-bg: $light-blue-background-color;
+$navbar-default-border: darken($navbar-default-bg, 0%);
+$navbar-default-color: $blue-logo-color;
+$navbar-default-link-color: $blue-logo-color;
+$navbar-default-link-hover-color: $orange-logo-color;
+$navbar-default-link-active-color: $maroon-logo-color;
+
+@import "bootstrap"; 
+
+body {
+  padding-top: 70px;
+}
+ 
+    .text-grey-light {
+    color: $grey-forty-percent;
+  }
+ 
+  // Images
+  
+  .image-sm {
+    max-width:  25%;
+    max-height: auto;
+  }
+  
+  .image-xsm {
+    max-width:  16%;
+    max-height: auto;
+  }
+  
+  .img-xmd {
+	max-width: 50%;
+	max-height: auto;
+  }
+  
+  .image-md {
+    max-width:  $golden-ratio-long;
+    max-height: auto;
+  }
+  
+  .img-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .img-margin {
+    display: block;
+    margin-right: 1em;
+  }
+  
+  .img-styling-basic {
+    border: #111 solid 1px;
+    box-shadow: $shadow-hard;
+    border-radius: 6px;
+  }
+  
+  .img-shadow-soft {
+	box-shadow: $shadow-soft;
+  }
+
+  .img-shadow-hard {
+	box-shadow: $shadow-hard;
+  }
+
+  .img-rounded-corners-12 {
+    @include border-radius(12px);
+  }
+  // Navigation & Link Default Resets
+  // Nav-bar
+  .navbar {
+    @include border-radius(0px);
+  }
+
+  .navbar-brand {
+    font-weight: bolder;
+  }
+
+// NAMED SPACES
+  // Homepage
+	
+  #homePage {
+	
+  	#marquee {
+	  padding: 1.25em 0;
+	  margin: 0;
+	  min-width: 100%;
+	}
+	
+	#categories {
+	  padding-top: 2em;
+	  
+	  h2 {
+		margin-top: 0;
+		padding-top: 0;
+	  }
+	}
+	
+	#productDetails {
+	  
+	}
+  }
+
+  .footer-site {
+	color: $light-blue-logo-color;
+	margin: 32px 16px 0px 16px;
+	padding: 32px 16px 32px 16px;
+	background-image: url(footer.png);
+  }
